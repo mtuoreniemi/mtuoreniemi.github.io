@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box; /*pitää elementit suunnitellun kokoisena */
+}
+
+h1 {
+    color:#E4E4E4;
+    text-align: center; /*keskitys */
+    text-shadow: 8px 8px 8px black;
+    font-family: "Indie Flower", cursive;
+    
+}
+
+.ylärivi {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 60px;
+    
+}
+
+.header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profiilikuva {
+    width: clamp(40px, 8vw, 600px);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: auto;
+}
+.menu-toggle {
+    display: none;
+}
+
+p {
+    color: #FFC1CC;
+    font-family: "Montserrat";
+    padding: 40px;
+    font-size: large;
+}
+
+
+
+
+h4 {
+    color: #E4E4E4;
+    text-align: center; /*keskitys */
+    text-shadow: 8px 8px 8px black;
+    font-family: "Indie Flower", cursive;
+}
+
+header a {
+    text-decoration: none;
+}
+
+body{
+    background-color: #A8DADC;
+     /*taustakuva */
+    background-repeat: no-repeat; /* taustakuva yhteen kertaan */
+    background-size: cover; /* taustakuvan koko */
+    background-attachment: fixed; /* kiinnittää taustakuvan */
+}
+
+.keskelle {
+    text-align: center; /* sisällön keskitys */
+}
+
+.nav-menu {
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: #FFC1CC;
+    background-color: #2c2c2c;
+    padding: 10px;
+    border: 3px solid pink;
+    text-decoration: none; /* alleviivaus pois */
+    display: inline-block; /* linkis esitys, joka mahdollistaa leveyden määrityksen */
+    width: 8em; /* leveys */
+    border-radius: 8px; /* kulmanpyäristys */
+}
+
+.sivulla {
+    color: #FFC1CC;
+    background-color: #B39CD0;
+}
+
+a:hover {
+    color: #2C2C2C;
+    background-color: #A8DADC ;
+}
+
+
+main {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto; /*lohkon keskitys*/
+    border: 3px #FFC1CC;/*reunus*/
+    padding: 20px; /* tyhjä tila reunan ja sisällön väliim */
+    background-color: #2C2C2C; /*taustaväri*/
+    box-shadow: 8px 8px 8px #B39CD0; /* heittovarjo */
+    border-radius: 30px;
+}
+
+@media (max-width: 600px) {
+
+
+
+.menu-toggle {
+    display: block;
+    position: fixed;
+    top: 40px;
+    left: -80px;
+    font-size: 28px;
+    background-color: #2c2c2c;
+    color: #FFC1CC;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+nav{
+    display: none;
+}
+
+/* sidebar menu */
+.nav-menu {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: -250px;
+    width: 160px;
+    height: 30%;
+    background-color: #A8DADC;
+    padding-top: 70px;
+    text-align: left;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+/* open state */
+.nav-menu.open {
+    left: 0;
+}
+
+/* profile pic moves to replace navbar area */
+.profiilikuva {
+    display: none;
+
+    
+}
+
+
+}
+
+hr {
+    color: #E4E4E4;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+
