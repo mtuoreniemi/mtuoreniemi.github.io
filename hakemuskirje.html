@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <!-- koodisto-->
+    <meta charset="utf-8"> 
+    <!-- Skaalaus eri levyisille näytöille-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <!-- sivun omistaja-->
+      <meta name="author" content="Miika">
+      <!-- kuvaus sivusta-->
+      <meta name="description" content="Miika Tuoreniemi, Ohjelmistokehittäjä">
+      <!-- keywords -->
+       <meta name="keywords" content="Ohjelmistokehittäjä, developer, CV">
+       <!-- linkki ulkopuoliseen css tiedostoon-->
+        <link href="styles.css" rel="stylesheet">
+        <!-- sivun sisäinen tyyli-->
+         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oi&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oi&display=swap" rel="stylesheet">
+
+
+        
+         
+
+<title>Hakemuskirje</title>
+</head>
+<body>
+   
+    <main>
+        <br><br><br>
+       <div class="ylärivi">
+        <header class="header"> 
+        <a href="index.html">
+        <h1> Miika Tuoreniemi</h1>
+        <h4> Ohjelmistokehittäjä</h4>
+        </a>
+        </header>
+        <img src="profiilikuva.jpg" alt="profiilikuva" class="profiilikuva">
+    
+        </div>
+        <br><br><br>
+<button class="menu-toggle">☰</button>
+        <nav class="nav-menu"> <!-- navigointi ratkaisut-->
+            <button class="close-menu">X</button>
+            <a href="index.html#projektit">projektit</a>
+            <a href="index.html#cv">CV</a>
+            <a href="index.html#hakemuskirje" class="sivulla">hakemuskirje</a>
+        </nav>
+
+    
+    </main>
+    
+    <script>
+        const toggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector(".nav-menu");
+        const closeBtn = document.querySelector(".close-menu");
+
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("open");
+        });
+        closeBtn.addEventListener("click", () => {
+            nav.classList.remove("open");
+        });
+
+        /* smooth scroll is not needed here, but harmless if left in */
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = link.getAttribute('href').substring(1);
+                const section = document.getElementById(sectionId);
+                const container = document.querySelector('.scroll-container');
+                if (section && container) {
+                    const sectionTop = section.offsetTop - container.offsetTop;
+                    container.scrollTo({ top: sectionTop, behavior: 'smooth' });
+                }
+                nav.classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+</html>

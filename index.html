@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+     <!-- koodisto-->
+    <meta charset="utf-8"> 
+    <!-- Skaalaus eri levyisille näytöille-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <!-- sivun omistaja-->
+      <meta name="author" content="Miika">
+      <!-- kuvaus sivusta-->
+      <meta name="description" content="Miika Tuoreniemi, Ohjelmistokehittäjä">
+      <!-- keywords -->
+       <meta name="keywords" content="Ohjelmistokehittäjä, developer, CV">
+       <!-- linkki ulkopuoliseen css tiedostoon-->
+        <link href="styles.css" rel="stylesheet">
+        <!-- sivun sisäinen tyyli-->
+         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oi&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Oi&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+              
+        
+         
+
+<title>Miika Tuoreniemi</title>
+</head>
+<body>
+
+    
+
+    
+    <main> 
+        <br><br><br>
+        <div class="ylärivi">
+        <header class="header"> 
+        <a href="index.html">
+        <h1> Miika Tuoreniemi</h1>
+        </a>
+        <h4> Ohjelmistokehittäjä</h4>
+        <button class="menu-toggle">☰</button>
+        </header>
+        <img src="profiilikuva.jpg" alt="profiilikuva" class="profiilikuva">
+    
+        </div>
+
+        
+
+        <br><br><br>
+
+        <nav class="nav-menu"> <!-- navigointi ratkaisut-->
+            <button class="close-menu">X</button>
+            <a href="#projektit">projektit</a>
+            <a href="#cv">CV</a>
+            <a href="#hakemuskirje">hakemuskirje</a>
+        </nav>
+
+          <script>
+        const toggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector(".nav-menu");
+        const closeBtn = document.querySelector(".close-menu");
+
+        toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        });
+        closeBtn.addEventListener("click", () => {
+        nav.classList.remove("open");
+        });
+
+        // Handle anchor link clicks for smooth scrolling within container
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            const container = document.querySelector('.scroll-container');
+            if (section && container) {
+                // make sure the scroll-container itself is visible in the viewport
+                container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                const sectionTop = section.offsetTop - container.offsetTop;
+                container.scrollTo({ top: sectionTop, behavior: 'smooth' });
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = link.getAttribute('href').substring(1);
+                scrollToSection(sectionId);
+                // Close mobile menu if open
+                nav.classList.remove('open');
+            });
+        });
+
+        // scroll to hash on load (e.g. when navigated from another page)
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                const hash = window.location.hash.substring(1);
+                scrollToSection(hash);
+            }
+        });
+    </script>
+        
+    <article> 
+
+        <p>Hei, olen ensimmäisen vuoden tradenomiopiskelija, joka suuntautuu ohjelmistokehitykseen. Aikaisempaa työkokemusta minulta löytyy kokous- ja asiakaspalvelutehtävistä sekä teknisestä tuesta ISS Palveluilla, 
+            missä olen hoitanut asiakaskohtaamisia kasvotusten, puhelimitse ja digikanavissa, 
+            koordinoinut palveluita ja ratkaissut asiakkaiden ongelmatilanteita yhteistyössä eri tiimien kanssa.
+             Vahvuuksiani ovat oma-aloitteinen ja järjestelmällinen työote, paineensietokyky sekä kyky omaksua uusia järjestelmiä nopeasti. 
+             Entinen huippu-urheilutaustani näkyy tavoitteellisuutena, vastuullisuutena ja jatkuvana haluna kehittyä, ja työskentelen sujuvasti suomeksi ja englanniksi.
+        </p>
+    </article>
+
+    <!-- Scrollable container for sections -->
+    <div class="scroll-container">
+        <section id="cv" class="content-section">
+            <div class="section-header">
+                <h2>CV</h2>
+                <a href="CV Miika Tuoreniemi.pdf" download title ="Download CV">
+                <img src="https://s2.svgbox.net/files.svg?ic=pdf&color=000000" width="32" height="32" alt="pdf icon">
+                </a>
+                <p>(Download PDF)</p>
+            </div>
+            <img src="cv.png" alt="cv" class="cvkuva">
+            
+        </section>
+
+        <section id="hakemuskirje" class="content-section">
+            <h2>Hakemuskirje</h2>
+            <p>Hakemuskirje content will go here. This is where you can put your application letter.</p>
+        </section>
+
+        <section id="projektit" class="content-section">
+            <h2>Projektit</h2>
+            <p>Projektit content will go here. Showcase your projects here.</p>
+        </section>
+    </div>
+    
+
+
+
+<footer>
+   
+   <div class="mail">
+    <img src="https://s2.svgbox.net/hero-outline.svg?ic=mail&color=FFC1CC" width="32" height="32">
+    
+    <p class="sposti">
+        mtuoreniemi@gmail.com
+    </p>
+   </div>
+
+   <div class="puh">
+    <img src="https://s2.svgbox.net/hero-outline.svg?ic=phone&color=FFC1CC" width="30" height="30">
+    
+    <p class="numero">
+        +358443506664
+   </div>
+    
+    <pre>
+    <!-- copyright-->
+    <div class="copy"> @copy; Miika </div>
+</footer>
+</main>
+
+
+</body>
+</html>
