@@ -142,7 +142,7 @@ main {
     font-size: small;
     margin: 0;       /* remove default margin */
     padding: 0;      /* remove padding for tighter spacing */
-    text-decoration: none;
+    color: #FFC1CC;
 }
 
 .numero:hover {
