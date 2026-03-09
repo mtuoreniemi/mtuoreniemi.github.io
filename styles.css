@@ -91,7 +91,7 @@ nav a {
 }
 
 .sivulla {
-    color: #FFC1CC;
+    color: #2c2c2c;
     background-color: #B39CD0;
 }
 
@@ -253,17 +253,7 @@ ul {
     list-style-type: none;
 }
 
-.scroll-container {
-    height: 600px;  /* Fixed height for internal scrolling */
-    overflow-y: scroll;  /* Enable vertical scrolling */
-    overflow-x: hidden;
-    border: 3px solid #FFC1CC;
-    border-radius: 15px;
-    margin: 20px auto;
-    max-width: 1100px;
-    width: 85%;
-    padding: 0;
-}
+
 
 .content-section {
     scroll-margin-top: 0;
@@ -301,6 +291,57 @@ ul {
     font-family: "Montserrat";
 }
 
-.content-section p:hover {
-    opacity: 0.7;
+.projektit {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
+
+.projektit img {
+    width: 400px;
+    height: 400px;
+}
+
+.projektilinkit {
+    padding: 20px;
+    justify-content: space-between;
+    
+}
+.projektilinkit a {
+    text-decoration: none;
+    color: #FFC1CC;
+    background-color: #2c2c2c;
+    padding: 10px;
+    border: 3px solid #FFC1CC;
+}
+
+.projektilinkit a:hover {
+    color: #2C2C2C;
+    background-color: #A8DADC ;
+}
+
+a.noppapeli {
+    margin-left: 250px;
+}
+
+.hakemuskirje {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* center the image and add vertical spacing */
+    border-radius: 10px;
+}
+
+.hakemuskirjepdf {
+    display: block;
+    margin: 20px auto; /* center the image and add vertical spacing */
+}
+
+
+
+
+
+
+
+
+

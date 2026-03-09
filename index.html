@@ -32,7 +32,7 @@
         <br><br><br>
         <div class="ylärivi">
         <header class="header"> 
-        <a href="index.html">
+        <a href="index.html" class="sivulla">
         <h1> Miika Tuoreniemi</h1>
         </a>
         <h4> Ohjelmistokehittäjä</h4>
@@ -48,9 +48,9 @@
 
         <nav class="nav-menu"> <!-- navigointi ratkaisut-->
             <button class="close-menu">X</button>
-            <a href="#projektit">projektit</a>
-            <a href="#cv">CV</a>
-            <a href="#hakemuskirje">hakemuskirje</a>
+            <a href="projektit.html">projektit</a>
+            <a href="CV.html">CV</a>
+            <a href="hakemuskirje.html">hakemuskirje</a>
         </nav>
 
           <script>
@@ -65,36 +65,6 @@
         nav.classList.remove("open");
         });
 
-        // Handle anchor link clicks for smooth scrolling within container
-        function scrollToSection(id) {
-            const section = document.getElementById(id);
-            const container = document.querySelector('.scroll-container');
-            if (section && container) {
-                // make sure the scroll-container itself is visible in the viewport
-                container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-                const sectionTop = section.offsetTop - container.offsetTop;
-                container.scrollTo({ top: sectionTop, behavior: 'smooth' });
-            }
-        }
-
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const sectionId = link.getAttribute('href').substring(1);
-                scrollToSection(sectionId);
-                // Close mobile menu if open
-                nav.classList.remove('open');
-            });
-        });
-
-        // scroll to hash on load (e.g. when navigated from another page)
-        document.addEventListener('DOMContentLoaded', () => {
-            if (window.location.hash) {
-                const hash = window.location.hash.substring(1);
-                scrollToSection(hash);
-            }
-        });
     </script>
         
     <article> 
@@ -108,28 +78,7 @@
     </article>
 
     <!-- Scrollable container for sections -->
-    <div class="scroll-container">
-        <section id="cv" class="content-section">
-            <div class="section-header">
-                <h2>CV</h2>
-                <a href="CV Miika Tuoreniemi.pdf" download title ="Download CV">
-                <img src="https://s2.svgbox.net/files.svg?ic=pdf&color=000000" width="32" height="32" alt="pdf icon">
-                </a>
-            </div>
-            <img src="cv.png" alt="cv" class="cvkuva">
-            
-        </section>
-
-        <section id="hakemuskirje" class="content-section">
-            <h2>Hakemuskirje</h2>
-            <p>Hakemuskirje content will go here. This is where you can put your application letter.</p>
-        </section>
-
-        <section id="projektit" class="content-section">
-            <h2>Projektit</h2>
-            <p>Projektit content will go here. Showcase your projects here.</p>
-        </section>
-    </div>
+    
 
 
     
@@ -153,7 +102,7 @@
         +358443506664
    </div>
     
-    <pre>
+    <br>
     <!-- copyright-->
     <div class="copy"> @copy; Miika </div>
 </footer>
