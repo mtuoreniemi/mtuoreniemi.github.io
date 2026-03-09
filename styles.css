@@ -241,6 +241,25 @@ nav .close-menu {
     
 }
 
+.puh {
+    display: flex;
+    align-items: center;  /* vertically center items */
+    gap: 0px;            /* space between image and text */
+}
+
+.numero {
+    font-size: small;
+    margin: 0;       /* remove default margin */
+    padding: 0;      /* remove padding for tighter spacing */
+    color: #FFC1CC;
+}
+
+.numero:hover {
+    opacity: 0.8;         /* slight fade on hover */
+}
+
+
+
 
 }
 
