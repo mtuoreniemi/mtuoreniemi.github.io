@@ -244,7 +244,54 @@ nav .close-menu {
 .numero {
     text-decoration: none;
     color: #FFC1CC;
+} 
+
+.projektit {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
+
+.projektit img {
+    width: 400px;
+    height: 400px;
+}
+
+.projektilinkit {
+    padding: 20px;
+    justify-content: space-between;
+    
+}
+.projektilinkit a {
+    text-decoration: none;
+    color: #FFC1CC;
+    background-color: #2c2c2c;
+    padding: 10px;
+    border: 3px solid #FFC1CC;
+}
+
+.projektilinkit a:hover {
+    color: #2C2C2C;
+    background-color: #A8DADC ;
+}
+
+a.noppapeli {
+    margin-left: 250px;
+}
+
+.hakemuskirje {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* center the image and add vertical spacing */
+    border-radius: 10px;
+}
+
+.hakemuskirjepdf {
+    display: block;
+    margin: 20px auto; /* center the image and add vertical spacing */
+}
+
 
 
 
@@ -282,6 +329,7 @@ ul {
 .content-section h2 {
     color: #E4E4E4;
     text-align: center;
+    text-shadow: 8px 8px 8px black;
     font-size: 2em;
     font-family: "Indie Flower", cursive;
     margin-top: 20px;
