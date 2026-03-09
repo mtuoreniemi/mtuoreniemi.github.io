@@ -241,8 +241,9 @@ nav .close-menu {
     
 }
 
-p.numero {
+.numero {
     text-decoration: none;
+    color: #FFC1CC;
 }
 
 
