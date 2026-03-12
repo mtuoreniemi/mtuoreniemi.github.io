@@ -181,6 +181,7 @@ main {
 p {
     padding: 20px 1rem; /* cut down on padding when viewport shrinks */
     font-size: medium;  /* reduce font slightly for small screens */
+    text-align: left;
 }
 
 .menu-toggle {
